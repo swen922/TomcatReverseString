@@ -46,6 +46,7 @@ public class ReadSerialized extends HttpServlet {
             mplReceived.setMapToSerialize(modifiedMap);
 
             String mapSerialized = mapper.writeValueAsString(mplReceived);
+            System.out.println(mapSerialized);
 
             resp.setStatus(200);
             OutputStreamWriter out = new OutputStreamWriter(resp.getOutputStream());
